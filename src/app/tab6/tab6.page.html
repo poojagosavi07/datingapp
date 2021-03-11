@@ -1,0 +1,76 @@
+<ion-content class="--ion-padding">
+  <div class="div-head">
+   
+    <ion-row>
+      <ion-col size="12">
+        <img src="./../../assets/img/taylor.jpg" class="img-user" />
+      <div>
+          <h6 style="text-align: center" class="user-name"><b>Jeniffer, 19 yrs</b></h6>
+          <p style="text-align: center" class="user-city"><ion-icon name="location-outline"></ion-icon> Paris (France) </p>
+        </div>
+      </ion-col>
+    </ion-row>
+
+     <ion-row>
+       <ion-col size="4">
+         <ion-fab-button size="large" (click)="onSetting()" color="danger" class="ion-float-right">
+           <ion-icon color="light" name="settings-outline"></ion-icon>
+         </ion-fab-button>
+         <p class="under-text text-pref" (click)="onSetting()">
+           <!-- Setting -->
+          </p>
+       </ion-col>
+
+       <ion-col size="4">
+         <ion-fab-button style="margin: 0 auto;" (click)="onPicture()" size="large" color="danger">
+           <ion-icon name="camera-outline"></ion-icon>
+         </ion-fab-button>
+         <p class="under-text ion-text-center" (click)="onPicture()">
+           <!-- Change picture -->
+          </p>
+       </ion-col>
+       
+       <ion-col size="4">
+         <ion-fab-button (click)="onEdit()" size="large" color="danger">
+           <ion-icon color="light" name="pencil-outline"></ion-icon>
+         </ion-fab-button>
+         <p class="under-text" (click)="onEdit()">
+           <!-- Edit Account -->
+          </p>
+       </ion-col>
+     </ion-row>
+
+  </div>
+
+ <div class="list-option">
+  
+  <ion-card>
+     <ion-card-content>
+       <ion-row>
+           <ion-text class="ion-text-justify"><h2><ion-icon name="shield-checkmark-outline" size="small"></ion-icon>&nbsp;
+             <b>Check the profile</b></h2></ion-text>
+       </ion-row>
+     </ion-card-content>
+   </ion-card>
+   
+   <ion-card>
+     <ion-card-content>
+       <ion-row>
+         <ion-row>
+           <ion-text class="ion-text-justify"><h2><ion-icon name="star-half" size="small"></ion-icon>&nbsp;
+             <b>Give us Note!</b></h2></ion-text>
+         </ion-row>
+       </ion-row>
+     </ion-card-content>
+   </ion-card>
+ 
+   <ion-card>
+     <ion-card-content>
+       <ion-row>
+           <ion-text class="ion-text-justify"><h2><ion-icon name="information-circle" size="small"></ion-icon>&nbsp;<b>Privacy</b></h2></ion-text>
+       </ion-row>
+     </ion-card-content>
+   </ion-card>
+ </div>
+ 
+</ion-content>

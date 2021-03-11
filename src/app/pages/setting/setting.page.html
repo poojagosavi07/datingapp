@@ -1,0 +1,80 @@
+<!-- Back button with a default href -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Setting</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-content>
+
+      <ion-item lines="none">
+        <ion-icon name="location" color="primary"></ion-icon>
+        <ion-label style="font-size: 15px;font-weight: bold;">Current Location</ion-label>
+        <ion-checkbox color="primary" checked="true"></ion-checkbox>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label>Add a new location</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label style="font-size: 20px;font-weight: bold;">Show Me</ion-label>
+    </ion-item>
+
+    <ion-card-content>
+
+      <ion-radio-group allow-empty-selection>
+
+        <ion-item>
+          <ion-label>Men</ion-label>
+          <ion-radio slot="end" color="primary" value="Men"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Women</ion-label>
+          <ion-radio slot="end" color="primary" value="Women"></ion-radio>
+        </ion-item>
+
+      </ion-radio-group>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label style="font-size: 20px;font-weight: bold;">Maximum Distance</ion-label>
+    </ion-item>
+  
+      <ion-item>
+        <ion-range style="color: #f53d3d;" pin="true"></ion-range>
+      </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label style="font-size: 20px;font-weight: bold;">Age Range</ion-label>
+      <ion-label slot="end">18 to 29</ion-label>
+    </ion-item>
+  
+    <ion-item lines="none">
+      <ion-range color="danger" dualKnobs="true" [(ngModel)]="ages" min="18" max="50" 
+      debounce="500" pin="true" (ionChange)="onAgeChange($event)"></ion-range>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item lines="none">
+      <ion-label>Share My Feed</ion-label>
+      <ion-toggle [(ngModel)]="smart_photos" color="danger" slot="end"></ion-toggle>
+    </ion-item>
+  </ion-card>
+
+</ion-content>

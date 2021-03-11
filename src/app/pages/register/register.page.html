@@ -1,0 +1,94 @@
+<ion-content>
+  <ion-list>
+    <div class="">
+
+      <ion-item>
+        <!-- <ion-avatar slot="start">
+          <img
+              src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg"></span>
+        </ion-avatar>
+        <ion-input type="file" [(ngModel)]="photo" [id]="pic"></ion-input> -->
+
+        <div class="card" style="margin-top: 10px;">
+          <div class="header" >
+            <div class="avatar" style="margin-top: -50px;height: 100px;width: 120px;">
+              <span (click)="openFolder()" >
+                <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" style="border: none;">
+               
+              </span>
+            
+            </div>
+          </div>
+        </div>
+
+      </ion-item>
+
+   
+
+      <ion-card>
+
+        <ion-item>
+          <ion-label position="floating" style="color: #f53d3d;font-size: 15px;font-weight: bold;">Name</ion-label>
+          <ion-input [(ngModel)]="your_name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating" style="color: #f53d3d;font-size: 15px;font-weight: bold;">E-mail</ion-label>
+          <ion-input [(ngModel)]="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating" style="color: #f53d3d;font-size: 15px;font-weight: bold;">Contact No.
+          </ion-label>
+          <ion-input [(ngModel)]="phone"></ion-input>
+        </ion-item>
+
+      </ion-card>
+
+      <ion-card style="margin-bottom: 10px;">
+
+        <ion-item>
+          <ion-label position="floating" style="color: #f53d3d;font-size: 15px;font-weight: bold;">Password
+          </ion-label>
+          <ion-input type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating" style="color: #f53d3d;font-size: 15px;font-weight: bold;">Confirm Password
+          </ion-label>
+          <ion-input type="password" [(ngModel)]="confirm_password"></ion-input>
+        </ion-item>
+
+      </ion-card>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="ion-text-end">
+              <ion-icon class="next-arrow" float-right name="arrow-forward-circle-sharp" size="large"
+                style="color: #f53d3d;font-size: 15px;"></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+      <!-- <ion-item>
+        <ion-label position="floating">Profile Picture</ion-label>
+        <ion-input type="file" ></ion-input>
+      </ion-item> -->
+
+
+      <!-- <ion-item>
+      <img src="{{imgURL}}"  />
+      <ion-button  (ng-click)="getCamera()">From Camera</ion-button>
+      <ion-button (click)="getGallery()">From Gallery</ion-button>
+     </ion-item>
+      -->
+
+    </div>
+    <!-- <p class="ion-padding info-1">
+    Already Have account? <span (click)="openRegister()">SignUp</span>
+  </p> -->
+  </ion-list>
+</ion-content>

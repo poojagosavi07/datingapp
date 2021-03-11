@@ -1,0 +1,70 @@
+<ion-content>
+
+  <ion-card>
+  
+    <ion-card-header>
+      <ion-card-title style="color: #f53d3d;font-size: 18px;font-weight: bold;">Who you are looking?</ion-card-title>
+    </ion-card-header>
+    <ion-item lines="none">
+    <!-- <ion-label style="color: #f53d3d;font-size: 18px;font-weight: bold;">Who you are looking?</ion-label> -->
+    <ion-select class="custom-options" placeholder="Select Gender">
+      <ion-select-option value="men">Men</ion-select-option>
+      <ion-select-option value="women">Women</ion-select-option>
+      <ion-select-option value="other">Others</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-card>
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title style="color: #f53d3d;font-size: 18px;font-weight: bold;">Birthdate</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="b_date" placeholder="DOB"></ion-datetime>
+      </ion-item>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title style="color: #f53d3d;font-size: 18px;font-weight: bold;">Location</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="location"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title style="color: #f53d3d;font-size: 18px;font-weight: bold;" position="floating">Bio</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item style="border: black;">
+        <ion-textarea clearOnEdit="true"></ion-textarea>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-end">
+          <ion-icon class="next-arrow" float-right  name="arrow-forward-circle-sharp" size="large"
+        style="color: #f53d3d;font-size: 15px;"></ion-icon>
+        </div>
+      </ion-col>
+     
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

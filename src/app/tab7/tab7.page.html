@@ -1,0 +1,48 @@
+<ion-content padding>
+
+  <sw-card-wrapper #cardWrapper>
+    <div class="container">
+      <ion-card class=" card" *ngFor="let question of questions; let index=index" swSwipeable [width]="350"
+        [height]="500" [orientation]="'x'" [class.visible]="question.visible"
+        [class.hidden]="!question.visible">
+        <img [src]="question.image" [alt]="question.name" style="height: 400px;width: 300px;">
+        <h1>{{question.name}} ,{{question.age}} <ion-icon color="success" name="checkmark-circle"></ion-icon></h1>
+       
+      </ion-card>
+    </div>
+  </sw-card-wrapper>
+
+  <div class="button_box">
+   
+     <!--Rewind-->
+     <ion-button  mode="ios" class="small_button" shape="round" fill="outline"> 
+        <ion-icon name="refresh" style="color: rgb(238, 255, 7);"></ion-icon>
+      </ion-button>
+
+    <div class="space"></div>
+
+    <!--Dislike-->
+    <ion-button (click)="onDisLike()" class="small_button" mode="ios" shape="round" fill="outline">
+      <ion-icon name="heart-dislike" style="color: rgb(247, 6, 6);"></ion-icon>
+    </ion-button>
+
+    <div class="space"></div>
+
+     <!--Like-->
+    <ion-button  (click)="onLike()" class="small_button" mode="ios" shape="round" fill="outline">
+      <ion-icon name="heart-sharp" style="color: #f53d3d;"></ion-icon>
+    </ion-button>
+   
+    <!--Follow-->
+    <ion-button  mode="ios" class="small_button" shape="round" fill="outline">
+      <ion-icon name="square" style="color: rgb(43, 145, 241);"></ion-icon>
+    </ion-button>
+
+      <!-- Super Like -->
+      <ion-button mode="ios"  class="small_button" shape="round"  shape="round" fill="outline">
+        <ion-icon style="color:rgb(103, 199, 236)" name="star"></ion-icon>
+      </ion-button>
+    
+  </div>
+
+</ion-content>

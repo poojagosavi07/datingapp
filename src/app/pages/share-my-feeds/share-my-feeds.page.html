@@ -1,0 +1,38 @@
+<!-- Back button with a default href -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Share My Feed</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card>
+    <ion-item lines="none">
+      <ion-label>Share my Feed</ion-label>
+      <ion-toggle [(ngModel)]="share_my_feed" color="danger" slot="end"></ion-toggle>
+    </ion-item>
+    <small>Share your social content will increse your chance to meet new peoples.</small>
+  </ion-card>
+
+  <ion-card>
+    <ion-item lines="none">
+      <ion-label>Photos</ion-label>
+      <ion-toggle [(ngModel)]="photos" color="danger" slot="end"></ion-toggle>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>Bio</ion-label>
+      <ion-toggle [(ngModel)]="bio" color="danger" slot="end"></ion-toggle>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>Work</ion-label>
+      <ion-toggle [(ngModel)]="work" color="danger" slot="end"></ion-toggle>
+    </ion-item>
+  </ion-card>
+
+</ion-content>
