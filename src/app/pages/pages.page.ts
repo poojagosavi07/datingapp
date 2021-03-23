@@ -23,4 +23,6 @@ export class PagesPage implements OnInit {
   // {
   //   this.router.navigate(['./login']);
   // }
+
+  
 }

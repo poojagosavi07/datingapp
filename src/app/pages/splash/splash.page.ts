@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./splash.page.scss'],
 })
 export class SplashPage implements OnInit {
-
-  constructor() { }
+  progress = 0.20;
+  constructor() 
+  {
+    setInterval( () => {  
+      this.progress += .1;  
+      }, 1000 ); 
+   }
 
   ngOnInit() {
+    
   }
+
+     
+  
 
 }

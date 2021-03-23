@@ -12,13 +12,41 @@
 
   <div class="acc-rec-no">
     <ion-grid class="btn-sty">
+      <ion-row class="lbl">
+        <ion-label>Enter OTP here</ion-label><br><br>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
       <ion-row>
-          <ion-label style="font-weight: bold;font-size: 18px;color: black;text-align: center;padding: 10px;">Enter OTP here</ion-label><br><br>
+        <ion-col>
+          <ion-card class="slot1">
+            <ion-input></ion-input>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="slot1">
+            <ion-input></ion-input>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="slot1">
+            <ion-input></ion-input>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="slot1">
+            <ion-input></ion-input>
+          </ion-card>
+        </ion-col>
       </ion-row>
 
       <ion-row>
-        
+        <ion-col>
+        <ion-button routerLink='../login' color="danger" class="btn" fill="outline" expand="block">Verify</ion-button>
+      </ion-col>
       </ion-row>
+      
     </ion-grid>
   </div>
 

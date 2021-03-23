@@ -6,27 +6,6 @@ $colors: (
   dark:       #222
 );
 
-.logo {
-  height: 40px;
-}
-
-.button_box {
-  width: 90%;
-  display: flex;
-  align-items: flex-start;
-  margin-left: 5%;
-  justify-content: center;
-}
-.small_button {
-  font-size: 20px;
-  --border-radius: 50%;
-  --border-width: 2px;
-  --border-color: #f3f3f3;
-  --padding-start: 8px;
-  --padding-end: 8px;
-  --background-activated: #f3f3f3;
-}
-
 
 .toggle-ios.toggle-checked.rainy-toggle .toggle-inner {
   background: url(data:image/svg+xml,%3Csvg);
@@ -38,4 +17,14 @@ $colors: (
 
 .toggle-ios.toggle-checked.rainy-toggle .toggle-icon {
   background-color: #0082FF;
+}
+
+ion-tabs{
+  margin-top:35px;
+  font-size: 20px;
+ 
+}
+
+.tabs{
+  font-weight: lighter;
 }

@@ -18,6 +18,9 @@ export class AppComponent {
     private splashScreen: SplashScreen
     // private statusBar: StatusBar
   ) {
+    setTimeout(()=>{
+      this.splashScreen.hide();  
+    },1000);
     this.initializeApp();
   }
 

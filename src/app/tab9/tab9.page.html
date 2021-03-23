@@ -52,7 +52,7 @@
 <ion-content [fullscreen]="true">
   <ion-list no-padding>
     <ion-item *ngFor="let chat of chatData" 
-    routerLink="./../chat/{{ chat.id }}" routerDirection="forward" >
+    routerLink="/pages/chat" routerDirection="forward" >
       <ion-avatar class="chatImage" slot="start">
         <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg">
       </ion-avatar>

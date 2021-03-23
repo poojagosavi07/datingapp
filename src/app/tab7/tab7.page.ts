@@ -72,20 +72,22 @@ export class Tab7Page implements OnInit, AfterViewInit{
 
   // LIKE ACTION
   onLike() {
-        const card = this.cards.toArray()[this.cards.toArray().length - this.nbr];
-        card.nativeElement.style.transition = '1s ease-out';
-        card.nativeElement.style.transform = `translateY(${+this.plt.width() * 5}px)
-              rotate(${100}deg)`;
-        this.nbr ++;
+        
+    const card = this.cards.toArray()[this.cards.toArray().length - this.nbr];
+    card.nativeElement.style.transition = '1s ease-out';
+    card.nativeElement.style.transform = `translateY(${-this.plt.width() * 3}px)
+          rotate(${100}deg)`;
+    this.nbr ++;
   }
 
   // DISLIKE ACTION
   onDisLike() {
-        const card = this.cards.toArray()[this.cards.toArray().length - this.nbr];
-        card.nativeElement.style.transition = '1s ease-out';
-        card.nativeElement.style.transform = `translateY(${this.plt.width() * 5}px)
-              rotate(${100}deg)`;
-        this.nbr ++;
+    const card = this.cards.toArray()[this.cards.toArray().length - this.nbr];
+    card.nativeElement.style.transition = '1s ease-out';
+    card.nativeElement.style.transform = `translateY(${+this.plt.width() * 3}px)
+          rotate(${100}deg)`;
+    this.nbr ++;
+
   }
 
   ngAfterViewInit(): void {
@@ -101,7 +103,7 @@ export class Tab7Page implements OnInit, AfterViewInit{
 
       const gesture =  this.gestureCtrl.create({
         el: card.nativeElement,
-        gestureName: 'swipe',
+        gestureName: 'swipte',
         onStart: ev => {
 
         },
@@ -112,12 +114,12 @@ export class Tab7Page implements OnInit, AfterViewInit{
         },
         onEnd: ev => {
           card.nativeElement.style.transition = '1s ease-out';
-          if (ev.deltaX > 10) {
-            card.nativeElement.style.transform = `translateY(${+this.plt.width() * 5}px)
+          if (ev.deltaX > 150) {
+            card.nativeElement.style.transform = `translateY(${+this.plt.width() * 3}px)
             rotate(${ev.deltaX / 2}deg)`;
             this.nbr ++;
-          } else if (ev.deltaX < -10) {
-            card.nativeElement.style.transform = `translateY(${-this.plt.width() *5}px)
+          } else if (ev.deltaX < -150) {
+            card.nativeElement.style.transform = `translateY(${-this.plt.width() * 3}px)
             rotate(${ev.deltaX / 2}deg)`;
             this.nbr ++;
           } else {
@@ -130,13 +132,13 @@ export class Tab7Page implements OnInit, AfterViewInit{
     }
   }
 
-  setCardColor(y, element) {
+  setCardColor(x, element) {
     let color = '';
-    const abs = Math.abs(y);
+    const abs = Math.abs(x);
     const min = Math.trunc(Math.min(16 * 16 - abs, 16 * 16));
     const hexCode = this.decimalToHex(min, 2);
 
-    if (y < 0) {
+    if (x < 0) {
       color = '#FF' + hexCode  + hexCode;
     } else {
       color = '#' + hexCode + 'FF' + hexCode;

@@ -14,16 +14,7 @@ export class RegisterPage implements OnInit {
  public gender: string;
   constructor() {}
 
-  genderHandler(event) {
-    // get data throught event emitter
-    this.gender = event.target.value;
-  }
+  goToRegister(){}
 
-  leaveGender(event) {
-    console.log('bye bye ', event.target.value);
-  }
-
-  goGender(event) {
-    console.log('hello ', event.target.value);
-  }
+  
 }

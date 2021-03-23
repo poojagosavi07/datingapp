@@ -12,4 +12,10 @@ export class AccountRecoveryPage implements OnInit {
   ngOnInit() {
   }
 
+  resetusingemail()
+  {}
+
+  resetusingphone()
+  {}
+  
 }

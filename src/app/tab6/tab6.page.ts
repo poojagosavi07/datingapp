@@ -9,21 +9,21 @@ import { Router } from '@angular/router';
 })
 export class Tab6Page{
 
-  img ="https://ionicframework.com/docs/demos/api/avatar/avatar.svg";
-  constructor(public modalController: ModalController, public route: Router) {}
+  // img ="https://ionicframework.com/docs/demos/api/avatar/avatar.svg";
+  constructor(public modalController: ModalController, public router: Router) {}
 
-  async onSetting() {
-    return this.route.navigateByUrl('/setting');
-  }
+  // async onSetting() {
+  //   this.router.navigateByUrl('../pages/setting');
+  // }
 
-  async onPicture() {
-    return this.route.navigateByUrl('/picture');
-  }
+  // async onPicture() {
+  //   return this.router.navigateByUrl('./add-photos');
+  // }
 
-  async onEdit() {
-   return this.route.navigateByUrl('/edit');
+  // async onEdit() {
+  //  return this.router.navigateByUrl('./edit-profile');
 
-  }
+  // }
 
 
 }

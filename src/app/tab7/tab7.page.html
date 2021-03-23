@@ -3,10 +3,10 @@
   <sw-card-wrapper #cardWrapper>
     <div class="container">
       <ion-card class=" card" *ngFor="let question of questions; let index=index" swSwipeable [width]="350"
-        [height]="500" [orientation]="'x'" [class.visible]="question.visible"
+        [height]="370" [orientation]="'y'" [class.visible]="question.visible"
         [class.hidden]="!question.visible">
-        <img [src]="question.image" [alt]="question.name" style="height: 400px;width: 300px;">
-        <h1>{{question.name}} ,{{question.age}} <ion-icon color="success" name="checkmark-circle"></ion-icon></h1>
+        <img [src]="question.image" [alt]="question.name" style="height: 300px;width: 300px;">
+        <h3>{{question.name}} ,{{question.age}} <ion-icon color="success" name="checkmark-circle"></ion-icon></h3>
        
       </ion-card>
     </div>
@@ -16,14 +16,14 @@
    
      <!--Rewind-->
      <ion-button  mode="ios" class="small_button" shape="round" fill="outline"> 
-        <ion-icon name="refresh" style="color: rgb(238, 255, 7);"></ion-icon>
+        <ion-icon name="refresh-outline" style="color: #f53d3d;"></ion-icon>
       </ion-button>
 
     <div class="space"></div>
 
     <!--Dislike-->
     <ion-button (click)="onDisLike()" class="small_button" mode="ios" shape="round" fill="outline">
-      <ion-icon name="heart-dislike" style="color: rgb(247, 6, 6);"></ion-icon>
+      <ion-icon name="heart-dislike-outline" style="color: #f53d3d;"></ion-icon>
     </ion-button>
 
     <div class="space"></div>
@@ -33,14 +33,18 @@
       <ion-icon name="heart-sharp" style="color: #f53d3d;"></ion-icon>
     </ion-button>
    
+    <div class="space"></div>
+
     <!--Follow-->
     <ion-button  mode="ios" class="small_button" shape="round" fill="outline">
-      <ion-icon name="square" style="color: rgb(43, 145, 241);"></ion-icon>
+      <ion-icon name="square-outline" style="color: #f53d3d;"></ion-icon>
     </ion-button>
 
+    <div class="space"></div>
+
       <!-- Super Like -->
-      <ion-button mode="ios"  class="small_button" shape="round"  shape="round" fill="outline">
-        <ion-icon style="color:rgb(103, 199, 236)" name="star"></ion-icon>
+      <ion-button mode="ios"  class="small_button" shape="round" fill="outline">
+        <ion-icon style="color: #f53d3d;" name="star-outline"></ion-icon>
       </ion-button>
     
   </div>
